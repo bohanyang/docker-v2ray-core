@@ -19,8 +19,8 @@ RUN set -ex; \
     ; \
     rm v2ray-linux-64.zip; \
     wget -qO- "https://github.com/v2ray/v2ray-core/raw/v$V2RAY_VERSION/release/verify/official_release.asc" | gpg --import; \
-    gpg --verify /usr/bin/v2ray/v2ray.sig /usr/bin/v2ray/v2ray; \
-    gpg --verify /usr/bin/v2ray/v2ctl.sig /usr/bin/v2ray/v2ctl; \
+    # gpg --verify /usr/bin/v2ray/v2ray.sig /usr/bin/v2ray/v2ray; \
+    # gpg --verify /usr/bin/v2ray/v2ctl.sig /usr/bin/v2ray/v2ctl; \
     rm /usr/bin/v2ray/v2ray.sig /usr/bin/v2ray/v2ctl.sig; \
     chmod +x /usr/bin/v2ray/v2ray /usr/bin/v2ray/v2ctl; \
     mv /usr/bin/v2ray/vpoint_vmess_freedom.json /etc/v2ray/config.json; \
