@@ -1,6 +1,6 @@
-FROM alpine:3.10
+FROM alpine:3.11
 
-ARG V2RAY_VERSION=4.21.3
+ARG V2RAY_VERSION=4.22.1
 
 RUN set -ex; \
     apk add --no-cache ca-certificates unzip wget; \
