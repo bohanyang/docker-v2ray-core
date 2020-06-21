@@ -1,6 +1,6 @@
 FROM alpine:3.11
 
-ARG V2RAY_VERSION=4.24.2
+ARG V2RAY_VERSION=4.25.0
 
 RUN set -eux; \
     wget "https://github.com/v2fly/v2ray-core/releases/download/v$V2RAY_VERSION/v2ray-linux-64.zip"; \
