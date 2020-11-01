@@ -1,9 +1,11 @@
 FROM alpine:3.12
 
-ARG V2RAY_VERSION=4.31.3
+ARG V2RAY_VERSION=4.32.0
 
 RUN set -eux; \
-    wget "https://github.com/v2fly/v2ray-core/releases/download/v$V2RAY_VERSION/v2ray-linux-64.zip"; \
+    apk add --no-cache curl; \
+    curl --fail --silent --show-error --location --remote-name --dump-header - "https://github.com/v2fly/v2ray-core/releases/download/v$V2RAY_VERSION/v2ray-linux-64.zip"; \
+    apk del curl; \
     mkdir /usr/bin/v2ray /etc/v2ray; \
     unzip \
         v2ray-linux-64.zip \
