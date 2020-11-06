@@ -1,6 +1,6 @@
 FROM alpine:3.12
 
-ARG V2RAY_VERSION=4.32.0
+ARG V2RAY_VERSION=4.32.1
 
 RUN set -eux; \
     apk add --no-cache curl; \
